@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship Certificate – Azhar Ali | SEPCO</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1a2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'EB Garamond', Georgia, serif;
+  }
+
+  .page {
+    background: #fffdf5;
+    width: 100%;
+    max-width: 820px;
+    padding: 60px 70px;
+    position: relative;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+  }
+
+  /* Outer border */
+  .page::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 2px solid #8B6914;
+    pointer-events: none;
+  }
+
+  /* Inner border */
+  .page::after {
+    content: '';
+    position: absolute;
+    inset: 18px;
+    border: 1px solid #C9A84C;
+    pointer-events: none;
+  }
+
+  .corner {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }
+  .corner svg { width: 100%; height: 100%; }
+  .corner.tl { top: 6px; left: 6px; }
+  .corner.tr { top: 6px; right: 6px; transform: scaleX(-1); }
+  .corner.bl { bottom: 6px; left: 6px; transform: scaleY(-1); }
+  .corner.br { bottom: 6px; right: 6px; transform: scale(-1,-1); }
+
+  .logo-section {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .logo-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #003580, #0057b8);
+    border: 3px solid #C9A84C;
+    margin-bottom: 12px;
+  }
+
+  .logo-circle span {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+
+  .org-name {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #003580;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .org-full {
+    font-size: 13px;
+    color: #555;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #C9A84C, transparent);
+  }
+
+  .divider-diamond {
+    color: #C9A84C;
+    font-size: 14px;
+  }
+
+  .cert-title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #8B1A1A;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .cert-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .awarded-to {
+    text-align: center;
+    font-size: 17px;
+    color: #444;
+    margin: 20px 0 6px;
+    font-style: italic;
+  }
+
+  .recipient-name {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #003580;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+  }
+
+  .recipient-detail {
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 4px;
+  }
+
+  .body-text {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.9;
+    margin: 16px 0;
+  }
+
+  .highlight {
+    font-weight: 600;
+    color: #8B1A1A;
+  }
+
+  .dept-box {
+    display: inline-block;
+    background: #003580;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 6px 28px;
+    border-radius: 2px;
+    margin: 8px 0;
+  }
+
+  .dates-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .date-badge {
+    background: #f5f0e0;
+    border: 1px solid #C9A84C;
+    padding: 4px 16px;
+    font-weight: 600;
+    color: #8B1A1A;
+    font-size: 15px;
+    border-radius: 2px;
+  }
+
+  .location-text {
+    text-align: center;
+    font-size: 15px;
+    color: #555;
+    font-style: italic;
+    margin: 6px 0 14px;
+  }
+
+  .commendation {
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.8;
+    padding: 12px 30px;
+    border-left: 3px solid #C9A84C;
+    border-right: 3px solid #C9A84C;
+    margin: 16px 0;
+    background: #fdfaf0;
+  }
+
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #777;
+  }
+
+  .signature-section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .signature-block {
+    text-align: center;
+    min-width: 220px;
+  }
+
+  .sig-line {
+    border-top: 1px solid #333;
+    margin-bottom: 6px;
+    padding-top: 8px;
+  }
+
+  .sig-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #003580;
+  }
+
+  .sig-title {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .cert-no-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: #777;
+  }
+
+  @media (max-width: 600px) {
+    .page { padding: 40px 28px; }
+    .cert-title { font-size: 22px; }
+    .recipient-name { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Corner ornaments -->
+  <div class="corner tl"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 48 L2 2 L48 2" stroke="#C9A84C" stroke-width="2" fill="none"/><circle cx="2" cy="2" r="4" fill="#C9A84C"/><path d="M10 2 Q26 2 26 18" stroke="#C9A84C" stroke-width="1" fill="none"/><path d="M2 10 Q2 26 18 26" stroke="#C9A84C" stroke-width="1" fill="none"/></svg></div>
+  <div class="corner tr"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 48 L2 2 L48 2" stroke="#C9A84C" stroke-width="2" fill="none"/><circle cx="2" cy="2" r="4" fill="#C9A84C"/><path d="M10 2 Q26 2 26 18" stroke="#C9A84C" stroke-width="1" fill="none"/><path d="M2 10 Q2 26 18 26" stroke="#C9A84C" stroke-width="1" fill="none"/></svg></div>
+  <div class="corner bl"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 48 L2 2 L48 2" stroke="#C9A84C" stroke-width="2" fill="none"/><circle cx="2" cy="2" r="4" fill="#C9A84C"/><path d="M10 2 Q26 2 26 18" stroke="#C9A84C" stroke-width="1" fill="none"/><path d="M2 10 Q2 26 18 26" stroke="#C9A84C" stroke-width="1" fill="none"/></svg></div>
+  <div class="corner br"><svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 48 L2 2 L48 2" stroke="#C9A84C" stroke-width="2" fill="none"/><circle cx="2" cy="2" r="4" fill="#C9A84C"/><path d="M10 2 Q26 2 26 18" stroke="#C9A84C" stroke-width="1" fill="none"/><path d="M2 10 Q2 26 18 26" stroke="#C9A84C" stroke-width="1" fill="none"/></svg></div>
+
+  <div class="cert-no-row">
+    <span>Date: _____________</span>
+    <span>Certificate No: ___________</span>
+  </div>
+
+  <div class="logo-section">
+    <div class="logo-circle"><span>SEPCO</span></div>
+    <div class="org-name">SEPCO</div>
+    <div class="org-full">Sukkur Electric Power Company</div>
+  </div>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-diamond">✦</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="cert-title">Certificate</div>
+  <div class="cert-subtitle">of completion</div>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-diamond">✦</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="awarded-to">This Certificate is Awarded to</div>
+
+  <div class="recipient-name">AZHAR ALI</div>
+
+  <div class="recipient-detail">S/O <strong>Muhammad Ayoob</strong> &nbsp;|&nbsp; CNIC# <strong>45304-1145397-3</strong></div>
+
+  <div class="divider" style="margin: 14px 0;">
+    <div class="divider-line"></div>
+    <div class="divider-diamond">◆</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="body-text">
+    On successful completion of<br>
+    <span class="highlight">One Year Internship Program</span> in<br>
+  </div>
+
+  <div style="text-align:center;">
+    <div class="dept-box">GSO DEPARTMENT</div>
+  </div>
+
+  <div class="dates-row">
+    <span>Held from</span>
+    <div class="date-badge">05th May 2025</div>
+    <span>to</span>
+    <div class="date-badge">04th May 2026</div>
+  </div>
+
+  <div class="location-text">At 132kV Grid Station, Naushahro Feroze, Sindh</div>
+
+  <div class="commendation">
+    "He demonstrated excellent technical aptitude and professional<br>
+    conduct throughout the internship period."
+  </div>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-diamond">✦</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="signature-section">
+    <div class="signature-block">
+      <div class="sig-line"></div>
+      <div class="sig-name">Engr. Aijaz Hussain Detho</div>
+      <div class="sig-title">Executive Engineer<br>SS&amp;T Division (GSO) SEPCO<br>DADU</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
